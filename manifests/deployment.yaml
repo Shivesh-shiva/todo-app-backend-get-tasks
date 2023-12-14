@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: get-tasks
+  name: get-task
 spec:
   replicas: 3
   selector:
@@ -16,7 +16,7 @@ spec:
       - name: get-tasks                                         
         image: shivesh183/get-task
         ports:
-        - containerPort: 8000
+          - containerPort: 8000
         env:
           - name: FRUITNAME
             valueFrom:
